@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Additional transition effect for the navbar background color */
+    .transition-bg {
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-20 bg-opacity-60 transition-bg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-2xl font-bold text-white px-10">Maya Cloth Center</div>
+      <nav class="hidden md:flex space-x-10 pr-10">
+        <a href="#home" class="text-gray-100 hover:text-gray-800">Home</a>
+        <a href="#features" class="text-gray-100 hover:text-gray-800">Features</a>
+        <a href="#about" class="text-gray-100 hover:text-gray-800">About</a>
+        <a href="#contact" class="text-gray-100 hover:text-gray-800">Contact</a>
+      </nav>
+      <button id="menu-btn" class="block md:hidden text-gray-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <a href="#home" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Home</a>
+      <a href="#features" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Features</a>
+      <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">About</a>
+      <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-cover bg-center h-screen" style="background-image: url('../shopping.webp');">
+    <!-- Background Overlay and Blur -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-xs"></div>
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto h-full flex items-center justify-center">
+      <div class="text-center text-white">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Welcome to Maya Cloth Center</h1>
+        <p class="text-xl md:text-2xl mb-8">Make your life easier</p>
+        <a href="#features" class="bg-violet-600 text-white py-3 px-6 rounded-full hover:bg-violet-700">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="pt-24 bg-gray-50 my-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Brands</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full my-10 px-20">
+        <a href="#shoe" class="">
+            <div class="bg-violet-100 p-6 rounded-lg shadow-md h-5/6">
+                <img src="../shoe.jpg" class="h-2/3 w-full"/>
+              <h3 class="text-xl font-semibold mb-2">Shoe brand</h3>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </a>
+        <a href="#clothes">
+            <div class="bg-violet-100 p-6 rounded-lg shadow-md h-5/6">
+                <img src="../tibeb.jpg" class="h-2/3 w-full"/>
+              <h3 class="text-xl font-semibold mb-2">Clothes</h3>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </a>
+        <a href="#accessories">
+            <div class="bg-violet-100 p-6 rounded-lg shadow-md h-5/6">
+                <img src="../earrings.jpg" class="h-2/3 w-full"/>
+              <h3 class="text-xl font-semibold mb-2">Accessories</h3>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </a>
+        <a href="#perfumes">
+            <div class="bg-violet-100 p-6 rounded-lg shadow-md h-5/6">
+                <img src="../perfume.jpg" class="h-2/3 w-full"/>
+              <h3 class="text-xl font-semibold mb-2">Perfumes</h3>
+              <p class=" text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- About Section -->
+<section id="about" class="pt-24 bg-gray-50 mb-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="max-w-4xl mx-auto text-gray-600 mb-8">
+        Maya Cloth Center has been a trusted name in the fashion industry for over a decade. 
+        We specialize in providing high-quality clothing, shoes, accessories, and perfumes that combine modern trends with traditional elegance. 
+        <span id="moreText" class="hidden transition-all duration-300">Our mission is to empower individuals by offering unique clothing and accessories that reflect their personal style while staying true to cultural heritage. We aim to blend the old with the new, ensuring that every piece tells a story.</span>
+        <a href="javascript:void(0)" id="toggleLink" class="text-violet-600 hover:underline">Read More</a>
+      </p>
+  
+      <!-- Full Width Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-20">
+  
+        <!-- Card 1: Mission -->
+        <div class="bg-violet-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+          <p class="text-gray-600">
+            Our mission is to empower individuals by offering unique clothing and accessories that reflect their personal style. 
+            <span class="more-card-text hidden transition-all duration-300">We aim to blend the old with the new, ensuring that every piece tells a story.</span>
+            <a href="javascript:void(0)" class="toggle-card text-violet-600 hover:underline">Read More</a>
+          </p>
+        </div>
+  
+        <!-- Card 2: History -->
+        <div class="bg-violet-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Our History</h3>
+          <p class="text-gray-600">
+            Established in 2010, Maya Cloth Center started as a small boutique specializing in traditional Ethiopian attire.
+            <span class="more-card-text hidden transition-all duration-300">Over the years, we have grown into a comprehensive fashion center, adding a wide range of modern clothing and accessories while preserving our cultural roots.</span>
+            <a href="javascript:void(0)" class="toggle-card text-violet-600 hover:underline">Read More</a>
+          </p>
+        </div>
+  
+        <!-- Card 3: What We Offer -->
+        <div class="bg-violet-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">What We Offer</h3>
+          <p class="text-gray-600">
+            We provide exclusive brands, designer collaborations, and handcrafted attire.
+            <span class="more-card-text hidden transition-all duration-300">Our offerings include a wide range of footwear, accessories, and personalized styling services for special occasions.</span>
+            <a href="javascript:void(0)" class="toggle-card text-violet-600 hover:underline">Read More</a>
+          </p>
+        </div>
+  
+        <!-- Card 4: Values -->
+        <div class="bg-violet-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Our Values</h3>
+          <p class="text-gray-600">
+            At Maya Cloth Center, we believe in sustainability, inclusivity, and quality.
+            <span class="more-card-text hidden transition-all duration-300">We work closely with local artisans to ensure our products are ethically sourced and designed to last. Customer satisfaction is at the heart of everything we do.</span>
+            <a href="javascript:void(0)" class="toggle-card text-violet-600 hover:underline">Read More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+
+  <!-- Contact Section -->
+  <section id="contact" class="pt-24 bg-white mb-16 pb-8">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <form onsubmit="return validateForm()" class="max-w-lg mx-auto">
+        <div class="mb-4 ">
+          <input type="text" placeholder="Name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-violet-100">
+        </div>
+        <div class="mb-4">
+            <input id="email" type="email" placeholder="Email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-violet-100">
+        </div>
+        <div class="mb-4">
+          <textarea placeholder="Message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-violet-100"></textarea>
+        </div>
+        <button type="submit" class="bg-violet-600 text-white py-3 px-6 rounded-full hover:bg-violet-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-violet-100 text-gray-400 text-center">
+    <p>&copy; 2024 MayaClothCenter. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Mobile Menu and Navbar Scroll Effect -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Change navbar background on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-violet-400', 'bg-opacity-90');
+      } else {
+        navbar.classList.remove('bg-violet-400', 'bg-opacity-90');
+      }
+    });
+
+    function validateForm() {
+        const email = document.getElementById('email').value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return false; // Prevent form submission
+        }
+    
+        return true; // Allow form submission if email is valid
+      }
+
+      // JavaScript for Read More / Read Less functionality
+document.querySelectorAll('.toggle-card').forEach(link => {
+    link.addEventListener('click', function () {
+      const moreText = this.previousElementSibling; // The span containing additional text
+      const isHidden = moreText.classList.contains('hidden');
+      
+      // Toggle visibility
+      moreText.classList.toggle('hidden', !isHidden);
+      moreText.classList.toggle('max-h-0', !isHidden); // For animation
+      moreText.classList.toggle('max-h-40', isHidden); // Adjust this height based on your content
+      
+      // Change link text
+      this.textContent = isHidden ? 'Read Less' : 'Read More';
+    });
+  });
+  
+  </script>
+</body>
